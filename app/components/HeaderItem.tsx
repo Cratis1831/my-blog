@@ -8,9 +8,11 @@ type Props = {
 
 function HeaderItem({ url, label }: Props) {
   return (
-    <Link href={url} className="font-semibold">
-      {label}
-    </Link>
+    <nav>
+      <Link href={url} className="font-semibold">
+        {label}
+      </Link>
+    </nav>
   );
 }
 

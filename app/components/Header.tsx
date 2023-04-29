@@ -4,20 +4,24 @@ import { FaGithub, FaFacebook, FaTwitter } from "react-icons/fa";
 import { HiOutlineMenu } from "react-icons/hi";
 import HeaderItem from "./HeaderItem";
 import Image from "next/image";
+import SearchBox from "./SearchBox";
 
 type Props = {};
 
 function Header({}: Props) {
   return (
-    <div className="sticky top-0 z-50 flex justify-between border-y border-gray-100 bg-white p-3 shadow-sm">
+    <div className="sticky top-0 z-50 flex items-center justify-between border-y border-gray-100 p-3 shadow-md">
       <p className="sm:hidden">
         <HiOutlineMenu size={24} />
       </p>
-      <Image src={"/images/logo.png"} alt="" height={35} width={35} />
-      <div className="flex justify-end ">
-        {/* Text Spacing between links should be 1.5 */}
-        <div className="hidden items-center sm:flex sm:space-x-5 sm:pr-10">
-          {/* Links: Home, About, Portfolio, Contact Us */}
+      <div className="flex items-center">
+        <Image src={"/images/logo.png"} alt="" height={35} width={35} />
+      </div>
+      <div className="hidden md:block">
+        <p className=" font-bold tracking-widest lg:text-xl">{`<Ashkan Sotoudeh />`}</p>
+      </div>
+      <div className="flex">
+        <div className=" hidden items-center sm:flex sm:space-x-5 sm:pr-10">
           <HeaderItem url="/" label="Home" />
           <HeaderItem url="/about" label="About" />
           <HeaderItem url="/portfolio" label="Portfolio" />

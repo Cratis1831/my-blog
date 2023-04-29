@@ -1,27 +1,32 @@
 "use client";
 import Typewriter from "typewriter-effect";
+import SearchBox from "./components/SearchBox";
 
 export default function Home() {
   return (
-    <main className="flex scale-150 items-center justify-center pt-20 text-2xl text-slate-900">
-      <Typewriter
-        options={{ autoStart: true, loop: true, delay: 75 }}
-        onInit={(typewriter) => {
-          typewriter
+    <main className="px-3">
+      <div className="mx-auto max-w-6xl flex-1">
+        <SearchBox />
+      </div>
+      <div className="flex justify-center pt-4 align-middle text-lg">
+        <Typewriter
+          options={{ autoStart: true, loop: true, delay: 75 }}
+          onInit={(typewriter) => {
+            typewriter
 
-            .typeString("Hello, Welcome to my website!<br />")
-            .callFunction(() => {
-              console.log("String typed out!");
-            })
-            .pauseFor(2500)
-            .typeString("How are you doing Aiden?")
-            .deleteAll()
-            .callFunction(() => {
-              console.log("All strings were deleted");
-            })
-            .start();
-        }}
-      />
+              .typeString("Hello, Welcome to my website!<br />")
+              // .callFunction(() => {
+              //   console.log("String typed out!");
+              // })
+              .pauseFor(2500)
+              .deleteAll()
+              // .callFunction(() => {
+              //   console.log("All strings were deleted");
+              // })
+              .start();
+          }}
+        />
+      </div>
     </main>
   );
 }

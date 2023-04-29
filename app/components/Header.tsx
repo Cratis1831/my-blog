@@ -5,12 +5,13 @@ import { HiOutlineMenu } from "react-icons/hi";
 import HeaderItem from "./HeaderItem";
 import Image from "next/image";
 import SearchBox from "./SearchBox";
+import Avatar from "./Avatar";
 
 type Props = {};
 
 function Header({}: Props) {
   return (
-    <div className="sticky top-0 z-50 flex items-center justify-between border-y border-gray-100 p-3 shadow-md">
+    <div className="sticky top-0 z-50 flex items-center justify-between border-y border-gray-100 bg-white p-3 shadow-md">
       <p className="sm:hidden">
         <HiOutlineMenu size={24} />
       </p>
@@ -41,6 +42,7 @@ function Header({}: Props) {
           <Link href="">
             <FaTwitter size={24} color="#55acee" />
           </Link>
+          <Avatar url="" label="" />
         </div>
       </div>
     </div>

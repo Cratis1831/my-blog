@@ -3,6 +3,7 @@ import React from "react";
 import { FaGithub, FaFacebook, FaTwitter } from "react-icons/fa";
 import { HiOutlineMenu } from "react-icons/hi";
 import HeaderItem from "./HeaderItem";
+import Image from "next/image";
 
 type Props = {};
 
@@ -12,10 +13,10 @@ function Header({}: Props) {
       <p className="sm:hidden">
         <HiOutlineMenu size={24} />
       </p>
-      <p>Logo</p>
+      <Image src={"/images/logo.png"} alt="" height={35} width={35} />
       <div className="flex justify-end ">
         {/* Text Spacing between links should be 1.5 */}
-        <div className="hidden sm:flex sm:space-x-5 sm:pr-10">
+        <div className="hidden items-center sm:flex sm:space-x-5 sm:pr-10">
           {/* Links: Home, About, Portfolio, Contact Us */}
           <HeaderItem url="/" label="Home" />
           <HeaderItem url="/about" label="About" />
@@ -23,9 +24,9 @@ function Header({}: Props) {
           <HeaderItem url="/contact" label="Contact Us" />
         </div>
         {/* Social Media Links */}
-        <div className="flex space-x-3 pr-3">
+        <div className="flex items-center space-x-3 pr-3">
           {/* GitHub */}
-          <Link href="">
+          <Link href="https://github.com/Cratis1831" target="_blank">
             <FaGithub size={24} color="#171515" />
           </Link>
           {/* Facebook */}

@@ -2,7 +2,7 @@
 import { HiSearch } from "react-icons/hi";
 function SearchBox() {
   return (
-    <form className="mt-3 flex items-center rounded-3xl border-2 px-5">
+    <form className="mt-3 flex items-center rounded-lg border-2 px-5">
       <HiSearch size={24} className="text-gray-500" />
       <input
         type="text"
